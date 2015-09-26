@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Virtual Socket</title>
+	<script type="text/javascript" src="./js/virtualSocket_client_0.1.js"></script>
+	
+	<script type="text/javascript">
+		
+		VirtualSocket("./api/chat.php")
+			.onReceive(function (response) {
+
+			// do whatever you want to do.. with the response object
+			// this response object has 4 properties 
+	    	/*
+	            ** new recieved data
+	            response.newObject;
+	            
+	            ** whole response text
+	            response.whole;
+
+	            ** number of iterations of functions
+	            response.iterations;
+
+	            ** status (receiving, or finished) 
+	            response.status;
+		    */
+
+				console.log(response);
+			});
+
+
+	</script>
+</head>
+<body>
+<button onclick="console.log('clicked')">yahoo</button>
+</body>
+</html>
